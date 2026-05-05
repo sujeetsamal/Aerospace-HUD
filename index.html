@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aerospace portfolio for Sujeet Samal, Aerospace Engineering undergraduate.">
+    <title>Sujeet Samal | Aerospace Systems Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Orbitron:wght@500;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  </head>
+  <body>
+    <div id="intro-overlay" aria-hidden="true"></div>
+
+    <div class="space-background" aria-hidden="true">
+      <canvas id="starfield"></canvas>
+      <div class="grid-layer"></div>
+      <div class="scanline"></div>
+    </div>
+
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand-lockup" href="#home">[ SUJEET SAMAL ]</a>
+        <div class="nav-links" id="desktop-nav">
+          <a href="#home">HOME</a>
+          <a href="#projects">PROJECTS</a>
+          <a href="#skills">SKILLS</a>
+          <a href="#about">ABOUT</a>
+          <a href="#contact">CONTACT</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <button class="mobile-close" type="button" aria-label="Close navigation menu">
+        <i data-lucide="x"></i>
+      </button>
+      <a href="#home">HOME</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+
+    <main>
+      <section class="hero section-frame" id="home" aria-label="Mission Control">
+        <div class="hero-grid">
+          <div class="profile-zone reveal">
+            <div class="profile-shell">
+              <svg class="hex-outline" viewBox="0 0 100 100" aria-hidden="true">
+                <polygon points="50 2 94 25 94 75 50 98 6 75 6 25"></polygon>
+              </svg>
+              <div class="profile-hex">
+                <img src="./assets/images/profile.jpg" data-fallback-src="./assets/images/profile.png" alt="Portrait of Sujeet Samal" id="profile-photo">
+                <div class="profile-placeholder" id="profile-placeholder">SS</div>
+              </div>
+              <div class="profile-lock">
+                <span>PROFILE NODE</span>
+                <strong>SS-0426</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="identity-block reveal">
+            <div class="boot-stack" id="boot-sequence" aria-live="polite">
+              <p class="terminal-line" data-type="> INITIALIZING SYSTEM..."></p>
+              <p class="terminal-line" data-type="> LOADING PROFILE..."></p>
+              <p class="terminal-line confirmed" data-type="> IDENTITY CONFIRMED"></p>
+              <h1 class="hero-title" data-type="SUJEET SAMAL"></h1>
+              <p class="hero-role" data-type="AEROSPACE SYSTEMS ENGINEER"></p>
+              <p class="typed-tags" data-type="[ FLIGHT SYSTEMS ] [ PROPULSION ] [ AUTONOMOUS FLIGHT ]"></p>
+            </div>
+
+            <dl class="system-facts" id="system-facts">
+              <div>
+                <dt>SYSTEM STATUS</dt>
+                <dd><span class="status-dot"></span> ACTIVE</dd>
+              </div>
+              <div>
+                <dt>LOCATION</dt>
+                <dd>20.2961° N, 85.8245° E — BHUBANESWAR, INDIA</dd>
+              </div>
+              <div>
+                <dt>CLEARANCE LEVEL</dt>
+                <dd>UNDERGRADUATE — SEM 4</dd>
+              </div>
+              <div>
+                <dt>CGPA</dt>
+                <dd>8.54 / 10.0</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#projects" aria-label="Scroll to projects">
+          <span>[ ↓ SCROLL TO ENGAGE ]</span>
+          <span class="cue-rule"></span>
+        </a>
+      </section>
+
+      <section class="section-frame mission-log" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading reveal">
+          <p>// MISSION LOG</p>
+          <h2 id="projects-title">ACTIVE & COMPLETED DEPLOYMENTS</h2>
+        </div>
+
+        <div class="mission-grid">
+          <article class="mission-card reveal">
+            <header>
+              <span>[MISSION: VTOL-X1]</span>
+              <span>STATUS: ✅</span>
+            </header>
+            <div class="mission-divider"></div>
+            <h3>TILT-ROTOR VTOL TRICOPTER</h3>
+            <h4>SYSTEMS DEPLOYED:</h4>
+            <ul>
+              <li>› Pixhawk Flight Controller</li>
+              <li>› 2×1000KV + 1×1400KV Motors</li>
+              <li>› 30A ESCs + 5000mAh LiPo</li>
+            </ul>
+            <p><strong>OBJECTIVE:</strong> Autonomous hover-to-forward transition via tilt-rotor mechanism. 1.2m wingspan, 1.5kg.</p>
+            <a href="#contact">[ VIEW DETAILS ]</a>
+          </article>
+
+          <article class="mission-card reveal">
+            <header>
+              <span>[MISSION: QUAD-S330]</span>
+              <span>STATUS: ✅</span>
+            </header>
+            <div class="mission-divider"></div>
+            <h3>S330 QUADCOPTER WITH PAYLOAD</h3>
+            <h4>SYSTEMS DEPLOYED:</h4>
+            <ul>
+              <li>› S330 Multirotor Frame</li>
+              <li>› Brushless Motor + ESC Stack</li>
+              <li>› Payload Mount + Power Bus</li>
+            </ul>
+            <p><strong>OBJECTIVE:</strong> Payload-capable quad platform tuned for stable lift, flight endurance checks, and modular onboard equipment testing.</p>
+            <a href="#contact">[ VIEW DETAILS ]</a>
+          </article>
+
+          <article class="mission-card reveal">
+            <header>
+              <span>[MISSION: FIXWING-01]</span>
+              <span>STATUS: ✅</span>
+            </header>
+            <div class="mission-divider"></div>
+            <h3>FIXED-WING RC AIRCRAFT (JOYTRAINER + CESSNA)</h3>
+            <h4>SYSTEMS DEPLOYED:</h4>
+            <ul>
+              <li>› JoyTrainer + Cessna Airframes</li>
+              <li>› Servo-Controlled Flight Surfaces</li>
+              <li>› Electric Propulsion + RC Link</li>
+            </ul>
+            <p><strong>OBJECTIVE:</strong> Build and validate fixed-wing aircraft behavior through control-surface tuning, glide stability, and powered flight trials.</p>
+            <a href="#contact">[ VIEW DETAILS ]</a>
+          </article>
+
+          <article class="mission-card reveal">
+            <header>
+              <span>[MISSION: ROTOR-LAB]</span>
+              <span>STATUS: ✅</span>
+            </header>
+            <div class="mission-divider"></div>
+            <h3>HELICOPTER MAIN ROTOR LAB PROTOTYPE</h3>
+            <h4>SYSTEMS DEPLOYED:</h4>
+            <ul>
+              <li>› Main Rotor Test Assembly</li>
+              <li>› Blade Pitch Control Linkage</li>
+              <li>› Servo Actuation + Bench Rig</li>
+            </ul>
+            <p><strong>OBJECTIVE:</strong> Prototype a rotor lab platform for studying lift response, cyclic control concepts, and mechanical stability under rotation.</p>
+            <a href="#contact">[ VIEW DETAILS ]</a>
+          </article>
+
+          <article class="mission-card reveal">
+            <header>
+              <span>[MISSION: CLIMB-BOT]</span>
+              <span>STATUS: ✅</span>
+            </header>
+            <div class="mission-divider"></div>
+            <h3>ESP32 POLE CLIMBING ROBOT</h3>
+            <h4>SYSTEMS DEPLOYED:</h4>
+            <ul>
+              <li>› ESP32 Control Core</li>
+              <li>› Motor Driver + Geared Wheels</li>
+              <li>› Clamp Mechanism + Wireless Link</li>
+            </ul>
+            <p><strong>OBJECTIVE:</strong> Create a compact climbing robot that grips vertical poles and moves under wireless control for inspection-style mobility tests.</p>
+            <a href="#contact">[ VIEW DETAILS ]</a>
+          </article>
+
+          <article class="mission-card reveal">
+            <header>
+              <span>[MISSION: LIDAR-SCAN]</span>
+              <span>STATUS: ✅</span>
+            </header>
+            <div class="mission-divider"></div>
+            <h3>LIDAR OBJECT DETECTION PROTOTYPE</h3>
+            <h4>SYSTEMS DEPLOYED:</h4>
+            <ul>
+              <li>› LiDAR / ToF Range Sensor</li>
+              <li>› Embedded Data Processing</li>
+              <li>› Detection Alerts + Scan Logic</li>
+            </ul>
+            <p><strong>OBJECTIVE:</strong> Detect nearby objects through live range sampling and convert sensor returns into simple obstacle awareness cues.</p>
+            <a href="#contact">[ VIEW DETAILS ]</a>
+          </article>
+
+          <article class="mission-card reveal">
+            <header>
+              <span>[MISSION: AQUA-IOT]</span>
+              <span>STATUS: ✅</span>
+            </header>
+            <div class="mission-divider"></div>
+            <h3>IOT WATER MONITORING SYSTEM</h3>
+            <h4>SYSTEMS DEPLOYED:</h4>
+            <ul>
+              <li>› ESP32 Wi-Fi Telemetry</li>
+              <li>› Water Quality Sensor Inputs</li>
+              <li>› Remote Dashboard + Alerts</li>
+            </ul>
+            <p><strong>OBJECTIVE:</strong> Monitor water parameters through connected sensing, transmit readings, and flag abnormal conditions for rapid response.</p>
+            <a href="#contact">[ VIEW DETAILS ]</a>
+          </article>
+
+          <article class="mission-card reveal">
+            <header>
+              <span>[MISSION: RC-CAR-X0]</span>
+              <span>STATUS: ✅</span>
+            </header>
+            <div class="mission-divider"></div>
+            <h3>ESP-BASED RC CAR</h3>
+            <h4>SYSTEMS DEPLOYED:</h4>
+            <ul>
+              <li>› ESP8266 / ESP32 Controller</li>
+              <li>› L298N Motor Driver</li>
+              <li>› Wi-Fi Command Interface</li>
+            </ul>
+            <p><strong>OBJECTIVE:</strong> Build a browser-controlled ground vehicle for validating embedded control, motor driving, and wireless response loops.</p>
+            <a href="#contact">[ VIEW DETAILS ]</a>
+          </article>
+
+          <article class="mission-card reveal">
+            <header>
+              <span>[MISSION: HYB-SIM-01]</span>
+              <span>STATUS: ✅</span>
+            </header>
+            <div class="mission-divider"></div>
+            <h3>HYBRID ELECTRIC AIRCRAFT SIMULATION</h3>
+            <h4>SYSTEMS DEPLOYED:</h4>
+            <ul>
+              <li>› MATLAB / Simulation Model</li>
+              <li>› Battery + Fuel Power Profiles</li>
+              <li>› Efficiency + Range Analysis</li>
+            </ul>
+            <p><strong>OBJECTIVE:</strong> Simulate hybrid-electric aircraft performance to compare energy split, propulsion behavior, and mission-level efficiency.</p>
+            <a href="#contact">[ VIEW DETAILS ]</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-frame onboard" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading reveal">
+          <p>// ONBOARD SYSTEMS</p>
+          <h2 id="skills-title">SUBSYSTEM DIAGNOSTIC REPORT</h2>
+        </div>
+
+        <div class="systems-grid">
+          <article class="system-panel skill-panel reveal">
+            <header>[ SYS-01: FLIGHT ] <span>● NOMINAL</span></header>
+            <div class="skill-meter" style="--level: 86%">
+              <div><span>Flight Controller Integration</span><strong>86%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 82%">
+              <div><span>VTOL Configuration</span><strong>82%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 90%">
+              <div><span>ESC Calibration</span><strong>90%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 84%">
+              <div><span>Power Distribution</span><strong>84%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 78%">
+              <div><span>Autonomous Flight</span><strong>78%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+          </article>
+
+          <article class="system-panel skill-panel reveal">
+            <header>[ SYS-02: EMBEDDED ] <span>● NOMINAL</span></header>
+            <div class="skill-meter" style="--level: 88%">
+              <div><span>ESP32 / IoT</span><strong>88%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 84%">
+              <div><span>L298N Motor Driver</span><strong>84%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 80%">
+              <div><span>Sensor Integration (LiDAR, ToF)</span><strong>80%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 86%">
+              <div><span>Wi-Fi Control Systems</span><strong>86%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 76%">
+              <div><span>Buck Converter / Power Circuits</span><strong>76%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+          </article>
+
+          <article class="system-panel skill-panel reveal">
+            <header>[ SYS-03: SOFTWARE ] <span>● NOMINAL</span></header>
+            <div class="skill-meter" style="--level: 82%">
+              <div><span>Python</span><strong>82%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 78%">
+              <div><span>C / C++</span><strong>78%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 80%">
+              <div><span>JavaScript / HTML / CSS</span><strong>80%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 84%">
+              <div><span>Fusion 360</span><strong>84%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 72%">
+              <div><span>CATIA</span><strong>72%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+            <div class="skill-meter" style="--level: 76%">
+              <div><span>MATLAB</span><strong>76%</strong></div>
+              <span class="meter-track"><span class="meter-fill"></span></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-frame about" id="about" aria-labelledby="about-title">
+        <div class="about-layout">
+          <div class="radar-shell reveal" aria-hidden="true">
+            <div class="radar" id="radar">
+              <span class="radar-sweep"></span>
+              <span class="radar-ring ring-one"></span>
+              <span class="radar-ring ring-two"></span>
+              <span class="radar-ring ring-three"></span>
+              <span class="radar-blip"></span>
+              <span class="radar-blip"></span>
+              <span class="radar-blip"></span>
+              <span class="radar-blip"></span>
+              <span class="radar-axis axis-x"></span>
+              <span class="radar-axis axis-y"></span>
+            </div>
+          </div>
+
+          <div class="profile-copy reveal">
+            <p class="section-code">// SYSTEM PROFILE — SUJEET SAMAL</p>
+            <h2 id="about-title">Aerospace Engineering undergraduate at Centurion University of Technology and Management, Bhubaneswar</h2>
+            <p>(Sem 4 | CGPA: 8.54)</p>
+            <p>I build things that fly.</p>
+            <p>From tilt-rotor VTOL systems to embedded flight controllers — my work sits at the intersection of hardware, software, and aerospace systems.</p>
+            <p>Primary research interest: Cryogenic propulsion and next-generation autonomous flight systems.</p>
+            <div class="terminal-notes">
+              <p>&gt;&gt; Currently: 4th Semester, B.Tech Aerospace</p>
+              <p>&gt;&gt; Focus: UAV Systems, Propulsion, Control</p>
+              <p>&gt;&gt; Goal: Aerospace R&amp;D / Propulsion Engineering</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-frame contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading reveal">
+          <p>// COMM LINK</p>
+          <h2 id="contact-title">ESTABLISH COMMUNICATION CHANNEL</h2>
+        </div>
+
+        <div class="signal-grid reveal">
+          <a class="signal-card" href="mailto:techsujeetsamal@gmail.com">
+            <i data-lucide="mail" data-fallback="@"></i>
+            <span>Email</span>
+            <strong>techsujeetsamal@gmail.com</strong>
+            <em>[ TRANSMIT MESSAGE ]</em>
+          </a>
+          <a class="signal-card" href="https://www.linkedin.com/in/sujeet-samal-3629373a1" target="_blank" rel="noreferrer">
+            <i data-lucide="linkedin" data-fallback="in"></i>
+            <span>LinkedIn</span>
+            <strong>sujeet-samal-3629373a1</strong>
+            <em>[ OPEN CHANNEL ]</em>
+          </a>
+          <a class="signal-card" href="https://github.com/sujeetsamal" target="_blank" rel="noreferrer">
+            <i data-lucide="github" data-fallback="gh"></i>
+            <span>GitHub</span>
+            <strong>sujeetsamal</strong>
+            <em>[ ACCESS REPOSITORY ]</em>
+          </a>
+          <a class="signal-card" href="./assets/resume-sujeet-samal.pdf" download>
+            <i data-lucide="file-down" data-fallback="pdf"></i>
+            <span>Resume</span>
+            <strong>Mission Dossier PDF</strong>
+            <em>[ DOWNLOAD DOSSIER ]</em>
+          </a>
+        </div>
+
+        <div class="signal-readout reveal" aria-label="Signal strength 80 percent and response time under 24 hours">
+          <span>SIGNAL STRENGTH:</span>
+          <span class="signal-blocks">████████░░</span>
+          <span>80%</span>
+          <span>RESPONSE TIME: &lt; 24HRS</span>
+          <span class="signal-meter"><span></span></span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 SUJEET SAMAL // TELEMETRY ONLINE</p>
+    </footer>
+    <script src="./intro.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
